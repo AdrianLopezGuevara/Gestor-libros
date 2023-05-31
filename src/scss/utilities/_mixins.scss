@@ -27,14 +27,14 @@
 
 @mixin btn($bgColor, $display) {
     background-color: $bgColor;
-    color: $blanco;
+    color: white;
     font-weight: bold;
     text-decoration: none;
     padding: 1rem 3rem;
     text-align: center;
-    margin-top: calc($separacion/2);
     display: $display;
     border: none;
+    border-radius: .5rem;
 
     &:hover {
         background-color: darken($color: $bgColor, $amount: 5);

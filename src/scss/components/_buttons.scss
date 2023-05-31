@@ -1,0 +1,6 @@
+@use '../utilities/mixins' as m;
+@use '../utilities/variables' as v;
+
+.btn-submit {
+    @include m.btn(v.$secundario, block);
+}
