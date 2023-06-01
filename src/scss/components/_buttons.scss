@@ -4,3 +4,7 @@
 .btn-submit {
     @include m.btn(v.$secundario, block);
 }
+
+input::-webkit-file-upload-button {
+    @include m.btn(v.$secundario, inline)
+}

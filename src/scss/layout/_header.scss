@@ -9,13 +9,18 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    column-gap: 10rem;
-    padding: 3rem;
+    padding: 2rem;
 
-    @include m.tablet {
+    @include m.desktop {
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
+    }
+}
+
+.logo{
+    @include m.tablet{
+        max-width: 30rem;
     }
 }
 
@@ -35,6 +40,8 @@
     }
 
     a {
+        font-weight: bold;
+        text-transform: uppercase;
         color: black;
         text-decoration: none;
         font-size: 1.8rem;
@@ -80,7 +87,7 @@
 
     @include m.tablet {
         flex-direction: row;
-        gap: 10rem;
+        gap: 3rem;
     }
 
     .search{

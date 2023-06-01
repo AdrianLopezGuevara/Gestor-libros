@@ -4,6 +4,7 @@
 html {
     box-sizing: border-box;
     font-size: 62.5%;
+    font-family: v.$font;
 }
 
 *,
@@ -29,4 +30,11 @@ img {
 a {
     text-decoration: none;
     font-family: v.$font;
+}
+
+h1,
+h2,
+h3 {
+    font-family: v.$fontHeading;
+    font-weight: bold;
 }

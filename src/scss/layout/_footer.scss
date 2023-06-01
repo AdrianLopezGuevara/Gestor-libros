@@ -1,0 +1,12 @@
+@use '../utilities/variables' as v;
+
+.footer {
+    padding: 2rem;
+    background-color: v.$grisOscuro;
+    margin: 10rem 0 0 0;
+
+    .copyright {
+        color: white;
+        text-align: center;
+    }
+}
