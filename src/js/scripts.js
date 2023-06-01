@@ -11,3 +11,7 @@ function navegacionResponsive() {
     const navegacion = document.querySelector('.nav');
     navegacion.classList.toggle('mostrar');
 }
+
+/* function (params) {
+    
+} */

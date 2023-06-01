@@ -1,0 +1,10 @@
+@use '../utilities/mixins' as m;
+@use '../utilities/variables' as v;
+
+.pdf{
+    margin: 5rem 0;
+    embed{
+        width: 100%;
+        height: 100rem;
+    }
+}

@@ -1,0 +1,19 @@
+@use '../utilities/mixins' as m;
+@use '../utilities/variables' as v;
+
+.libary {
+    @include m.grid(3, 2rem)
+}
+
+.libro{
+    img{
+        height: 50rem;
+    }
+    .autor{
+        font-size: 2rem;
+    }
+    .fecha{
+        text-align: end;
+        font-weight: bold;
+    }
+}

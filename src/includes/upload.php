@@ -3,15 +3,23 @@ $titulo = $_POST['titulo'];
 $autor = $_POST['autor'];
 $fecha = $_POST['fecha'];
 $archivo = $_FILES['archivo'];
+$portada = $_FILES['portada'];
 
-$carpeta = '../../archivos/';
-if (!is_dir($carpeta)) {
-    mkdir($carpeta);
+$carpetaArchivos = '../../archivos/';
+if (!is_dir($carpetaArchivos)) {
+    mkdir($carpetaArchivos);
+}
+$carpetaPortadas = '../../portadas/';
+if (!is_dir($carpetaPortadas)) {
+    mkdir($carpetaPortadas);
 }
 $nombreArchivo = md5(uniqid()) . ".pdf";
-move_uploaded_file($archivo['tmp_name'], $carpeta . $nombreArchivo);
+$nombrePortada = md5(uniqid()) . ".webp";
 
-$query = "INSERT INTO `libros` (`titulo`, `autor`, `fecha`, `archivo`) VALUES('$titulo', '$autor', '$fecha','$nombreArchivo');";
+move_uploaded_file($archivo['tmp_name'], $carpetaArchivos . $nombreArchivo);
+move_uploaded_file($portada['tmp_name'], $carpetaPortadas . $nombrePortada);
+
+$query = "INSERT INTO `libros` (`titulo`, `autor`, `fecha`, `archivo`, `portada`) VALUES('$titulo', '$autor', '$fecha','$nombreArchivo','$nombrePortada');";
 
 require './config/connection.php';
 $request = mysqli_query($connection, $query);
