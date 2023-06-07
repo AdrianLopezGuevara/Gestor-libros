@@ -19,25 +19,26 @@ function fetchLibro() {
     })
         .then(res => res.json())
         .then(libro => {
-            /* for (let i = 0; i < libro.length; i++) {
-                const portada = libro['portada'];
-                const titulo = libro['titulo'];
-                const autor = libro['autor'];
-                const fecha = libro['fecha'];
+            for (let i = 0; i < libro.length; i++) {
+                const portada = libro[i][5];
+                const titulo = libro[i][1];
+                const autor = libro[i][2];
+                const fecha = libro[i][3];
 
-                addLibro(portada, titulo, autor, fecha)
-            } */
-            const portada = libro['portada'];
+                addLibro(portada, titulo, autor, fecha);
+            }
+            /* const portada = libro['portada'];
             const titulo = libro['titulo'];
             const autor = libro['autor'];
             const fecha = libro['fecha'];
 
-            addLibro(portada, titulo, autor, fecha);
+            addLibro(portada, titulo, autor, fecha); */
         })
 }
 
 function addLibro(_portada, _titulo, _autor, _fecha) {
     const urlPortada = "../../portadas/" + _portada;
+
     const libreria = document.querySelector('.libary');
 
     const libro = document.createElement('div');
